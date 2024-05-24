@@ -18,6 +18,14 @@ export default {
       meta: {
         title: "基础"
       }
+    },
+    {
+      path: "/basics/loadGlb",
+      name: "BasicsLoadGlb",
+      component: () => import("@/views/basics/loadGlb.vue"),
+      meta: {
+        title: "加载第三方模型gltf"
+      }
     }
   ]
 } satisfies RouteConfigsTable;

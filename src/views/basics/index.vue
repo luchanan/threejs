@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-button @click="rebuild">销毁重新创建</el-button>
-    <div id="screen"></div>
+    <div id="screen" />
   </div>
 </template>
 
@@ -14,7 +14,8 @@ import {
   WebGLRenderer,
   BoxGeometry,
   MeshBasicMaterial,
-  Mesh
+  Mesh,
+  Color
 } from "three";
 defineOptions({
   name: "Welcome"
@@ -25,6 +26,7 @@ const create = () => {
   let fov: number = 75;
   // 创建场景
   const scene = new Scene();
+  scene.background = new Color(0xa0a0a0);
   // 创建相机
   const camera = new PerspectiveCamera(fov, width / height, 0.1, 1000);
   // 创建渲染器
